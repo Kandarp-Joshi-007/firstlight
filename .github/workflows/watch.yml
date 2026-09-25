@@ -8,8 +8,10 @@ name: firstlight
 
 on:
   schedule:
-    - cron: "*/30 * * * *"      # every 30 min; GitHub's floor is 5, and
-                                # scheduled runs are delayed under load anyway
+    - cron: "0 6 * * *"         # 06:00 UTC daily. Running once a day means one
+                                # BIG pass rather than many small ones - see
+                                # --batches below. Scheduled runs are delayed
+                                # under load, so treat the time as approximate.
   workflow_dispatch:            # lets you trigger a run by hand
 
 permissions:
@@ -22,7 +24,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -44,7 +46,10 @@ jobs:
       - name: Collect
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python watch.py --once --batches 120
+        # 1,200 batches x 64 = ~77k certificates, ~7 minutes, ~500 MB.
+        # At 48 runs/day 120 was right; at 1 run/day it would see almost
+        # nothing, so the per-run volume goes up tenfold to compensate.
+        run: python watch.py --once --batches 1200
 
       - name: Export dashboard data
         run: python watch.py --export site/data.json
