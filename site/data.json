@@ -1,0 +1,2374 @@
+{
+ "generated": "2026-09-25T15:14:09Z",
+ "totals": {
+  "certificates": 116,
+  "names": 392263,
+  "candidates": 266,
+  "judged": 236,
+  "cost_usd": 0.0054,
+  "flagged": 232,
+  "review": 4
+ },
+ "detections": [
+  {
+   "domain": "royalmail.revoluts.nl",
+   "brand": "Revolut",
+   "reason": "contains 'revolut'",
+   "score": 0.83,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:45Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "revenue.ie.my-application-now.com",
+   "brand": "Revenue",
+   "reason": "'revenue' with Irish context",
+   "score": 0.72,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "revolutupdate.com",
+   "brand": "Revolut",
+   "reason": "contains 'revolut'",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "risk-management-aib.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.72,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "rebate.ie-revenue.services",
+   "brand": "Revenue",
+   "reason": "'revenue' with Irish context",
+   "score": 0.85,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:43Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-onlineupdate.com",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:42Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-open24-support.com",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:42Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-24ie.net",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-activityservice.com",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.8,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-ie24.com",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "permanent-tsb-open24.com",
+   "brand": "Permanent TSB",
+   "reason": "contains 'permanenttsb'",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "post.japanpost.jp-check.oatytea.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.81,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ptsb-24ie.com",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "onlinecustomer-support-aib.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "packet-anpost.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "payeereviewroionline-aib.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "online-aib-alert.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:38Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "online-aib-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:38Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "onlinebanking.aib.ie-account.review",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:38Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mygoveid.github.io",
+   "brand": "MyGovID",
+   "reason": "~'mygovid' (edit distance 1)",
+   "score": 0.8,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mygovidvalidate.github.io",
+   "brand": "MyGovID",
+   "reason": "contains 'mygovid'",
+   "score": 0.82,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "myigovid.github.io",
+   "brand": "MyGovID",
+   "reason": "~'mygovid' (edit distance 1)",
+   "score": 0.77,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "m-track-anposted.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mydgovid.github.io",
+   "brand": "MyGovID",
+   "reason": "~'mygovid' (edit distance 1)",
+   "score": 0.78,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "myg0vlid.github.io",
+   "brand": "MyGovID",
+   "reason": "~'mygovid' (edit distance 1)",
+   "score": 0.82,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "m.hse-wswhatsapp.cc",
+   "brand": "HSE",
+   "reason": "'hse' as a label",
+   "score": 0.86,
+   "target": "health",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:34Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mobil-aib.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:34Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mail.aib-security-login.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.95,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:33Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "mail.aib-web-supported.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:33Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ltaucard.ga",
+   "brand": "Leap Card",
+   "reason": "~'leapcard' (edit distance 2)",
+   "score": 0.8,
+   "target": "payment",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:32Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ltaucard.net",
+   "brand": "Leap Card",
+   "reason": "~'leapcard' (edit distance 2)",
+   "score": 0.74,
+   "target": "payment",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:32Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "login-revolut.co",
+   "brand": "Revolut",
+   "reason": "contains 'revolut'",
+   "score": 0.91,
+   "target": "payment",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:31Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ltaucard.com",
+   "brand": "Leap Card",
+   "reason": "~'leapcard' (edit distance 2)",
+   "score": 0.72,
+   "target": "payment",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:31Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "jpbank-japanpost-suomite.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.76,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:30Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "lnpost.shop",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:30Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "jpbank-japanpost-jp-longrn.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:29Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "jpbankjapanpost-opeymitr.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:29Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "inpost.plnew.annomo.top",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:28Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "inpost.powitanie.reklamarzym.pl",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.72,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:28Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "inpost.courierorder.com",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.8,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "inpost.onlineparcel.top",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.83,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "inpost.pl-id25584051.xyz",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "hse-email.gq",
+   "brand": "HSE",
+   "reason": "'hse' as a label",
+   "score": 0.81,
+   "target": "health",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "hse-wswhatsapp.cc",
+   "brand": "HSE",
+   "reason": "'hse' as a label",
+   "score": 0.83,
+   "target": "health",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "ie-anpost.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.8,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "fedex-us.fasttway.com",
+   "brand": "Fastway",
+   "reason": "~'fastway' (edit distance 1)",
+   "score": 0.81,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:25Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "gov.tax.revenue-return.uk",
+   "brand": "Revenue",
+   "reason": "'revenue' with Irish context",
+   "score": 0.87,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:25Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "halaban-post-ch.blogspot.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:25Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "fast-pay.co",
+   "brand": "Fastway",
+   "reason": "~'fastway' (edit distance 1)",
+   "score": 0.68,
+   "target": "shipping",
+   "verdict": "review",
+   "seen": "2026-09-25T14:52:24Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "fasttway.com",
+   "brand": "Fastway",
+   "reason": "~'fastway' (edit distance 1)",
+   "score": 0.6,
+   "target": "shipping",
+   "verdict": "review",
+   "seen": "2026-09-25T14:52:24Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "elliman-post-house.tv",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.72,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:23Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "citiz3ns-infomation-update03.dynamic-dns.net",
+   "brand": "Citizens Information",
+   "reason": "contains 'citizensinfo'",
+   "score": 0.89,
+   "target": "government",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:21Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankoflreland.net",
+   "brand": "Bank of Ireland",
+   "reason": "~'bankofireland' (edit distance 2)",
+   "score": 0.79,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:20Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "can-post.zzux.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.77,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:20Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireland-security.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:19Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankoflreland.info",
+   "brand": "Bank of Ireland",
+   "reason": "~'bankofireland' (edit distance 2)",
+   "score": 0.75,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:19Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireland.live",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireland-mobileportal.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofirelandpersonal.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireland365-auth.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:17Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireland-365authorization.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:17Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bankofireiand.info",
+   "brand": "Bank of Ireland",
+   "reason": "~'bankofireland' (edit distance 2)",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:16Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib.web.app",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:15Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "bank0fireland-logins.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:15Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib-online-support.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:14Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib-securitycentre.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:14Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib-helpdesk.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:13Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib-ie.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:13Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib-live.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:13Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.nbas.com.au",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.72,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.servesa.express",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.84,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aus-tralian-post-moujtabid60474585.codeanyapp.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "auth-aib.firebaseapp.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.mypoug.express",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:11Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.mypoxqz.express",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:11Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.date",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.72,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:10Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.mypope.express",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.84,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:10Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.aue0xjb.services",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.81,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:09Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aupost.auhejp.site",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:09Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "app-ptsb-bcb3ac.ingress-comporellon.ewp.live",
+   "brand": "Permanent TSB",
+   "reason": "'ptsb' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:08Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "arpost.xyz",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.77,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:08Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "au.anp0st.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:08Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpst.creview.informaticzcypto.com",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.85,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:07Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anspost.top",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.81,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:07Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "app.fastwaysandbox.com",
+   "brand": "Fastway",
+   "reason": "contains 'fastway'",
+   "score": 0.64,
+   "target": "shipping",
+   "verdict": "review",
+   "seen": "2026-09-25T14:52:07Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost.support",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:06Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-trace.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:06Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-track.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.77,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:06Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-track.info",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:06Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-reschedule-fee.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.85,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:05Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-service.info",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.81,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:05Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-redelivery-service.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:04Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-rescheduledelivery.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.88,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:04Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost.me",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.7,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:03Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-parcel.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:03Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-redeliveryrequest392.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.92,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:03Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-customs.report",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.85,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:02Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "an-post-delivery.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.8,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:02Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anposti.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.75,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:02Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-ienet-bcb3ac.ingress-erytho.ewp.live",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:02Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost-charge.link",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.85,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:01Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost.com-kits.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.79,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:01Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "an-post-customs-charges.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.89,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:01Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anapost.top",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:00Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "anpost.andahz.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.78,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:52:00Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-websupport-online.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:57Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-web-secured.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:56Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-websecured.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:56Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-websecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:56Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-web-onlinequeries.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:55Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-webonline-queries.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:55Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-web-queries.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.78,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:55Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-weblogin-secure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:54Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-web-loginsecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:54Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-webapp-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:53Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-web-login.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:53Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-verifypayments.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:52Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.verify-safety.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:52Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-webapp-secure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:52Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-user-secure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:51Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-user.top",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.77,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:51Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.verification-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:51Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-user.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:50Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-user-ie.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:50Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-user-login.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:50Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-update-authsecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:49Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-update.help",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:49Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-update-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:49Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-transaction-review.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:48Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-updateapp.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:48Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-support-webonline.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:47Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-suspicious-transaction.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:47Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-transaction-alert.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:47Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-support.help",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:46Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-support.online",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:46Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-supportsecure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:46Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-securityupdate.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:45Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-securitywebapp.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:45Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-services-help.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:45Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-login.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-process.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-service.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:44Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-securityinfo.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:43Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-loginapp.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:43Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-helpservice.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:42Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security.info",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:42Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secure-updatelogin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-applogin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-security-help.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:41Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secureonlinelogin-data.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.95,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secure-payement.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secure-transaction.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:40Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secureloginactivity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secureonline-authenti.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secureonlinebanking.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:39Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secured.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:38Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secured-web.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:38Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:37Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-securedatalogin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:37Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.safety-help.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-secureactivity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-securebanking.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:36Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-restore.support",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-review-ie.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-review-logonalert.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-review-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.82,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:35Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-queries-online.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.82,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:34Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-queriesonline.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:34Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-querysonline.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:34Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.purchase-online.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:33Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.purchase-safety.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.8,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:33Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-online-updatelogin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:32Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlineweb-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:32Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-payeesecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:32Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinesecure-authent.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:31Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinesecuresystem.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:31Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-online-services.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:31Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinemobilebanking.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:30Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinemobilehelp.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:30Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinequeries.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:30Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinebankingsecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:29Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinebanking-services.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:29Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinebanking-support.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:29Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlineassist.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.82,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:28Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-online-assist-portal.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:28Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-onlinebanking-secure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:28Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-mobilebanking-secure-access.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.monster",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.72,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-online-assistance-portal.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:27Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.login-verification.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.metasp-hepl.click",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-mobilebanking.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:26Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-login-securityweb.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:25Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-loginupdate-auth.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:25Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-login-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:24Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.login-security.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:24Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-loginonline.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:23Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-loginsecure.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.93,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:23Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-login-form.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:22Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-loginhelp.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:22Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.login-notification.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:22Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.ie-auth.info",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:21Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.ie-service.info",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:21Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-internetbanking-security.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:21Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-linesupport.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.85,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:21Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.helpdesk-alerts.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:20Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.help-verification.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:20Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.ie-account.info",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:20Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-bankingonline.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.9,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:19Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-customer-service.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.87,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:19Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.helpcentre-login.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:19Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-authority.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.8,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-auth-weblogin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.92,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-banking-assist.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:18Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-auth-ie.top",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:17Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-auth-loginsecurity.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.94,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:17Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-app-online.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.82,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:16Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-assistportal.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.83,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:16Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-attempt-review.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.78,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:16Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-auth-admin.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.89,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:16Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-alert.info",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:15Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-applogin-services.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:15Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-access-services.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.82,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:14Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib.account-alert.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:14Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-activitycheck.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.81,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:14Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-accessonline.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.84,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:13Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-accessportal.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.86,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:13Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aepost.dhl.partner.hungamaplay.pk",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "aib-accessapplogin.net",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.91,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:12Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "365bankofireland-personalbanking.com",
+   "brand": "Bank of Ireland",
+   "reason": "contains 'bankofireland'",
+   "score": 0.88,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:11Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "activityuser-aib.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.74,
+   "target": "bank",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:11Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "4i8.fat-fly.com",
+   "brand": "AIB",
+   "reason": "'aib' as a label",
+   "score": 0.67,
+   "target": "bank",
+   "verdict": "review",
+   "seen": "2026-09-25T14:51:11Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "1npost.net",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.82,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:10Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "1npos-t.shopsite-32.xyz",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.86,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:10Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "1helplinecanpost.info",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.8,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:09Z",
+   "source": "backfill"
+  },
+  {
+   "domain": "1npost.320212111222.xyz",
+   "brand": "An Post",
+   "reason": "~'anpost' (edit distance 1)",
+   "score": 0.83,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-09-25T14:51:09Z",
+   "source": "backfill"
+  }
+ ]
+}

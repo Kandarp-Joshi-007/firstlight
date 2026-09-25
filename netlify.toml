@@ -1,0 +1,19 @@
+# Static publish only. The collector runs in GitHub Actions and commits
+# site/data.json; Netlify redeploys on that push. No build step, no functions -
+# Netlify Functions are JS/TS and Go only, and this pipeline is Python.
+
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/data.json"
+  [headers.values]
+    Cache-Control = "public, max-age=60"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

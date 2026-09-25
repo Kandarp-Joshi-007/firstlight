@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>firstlight</title>
+<meta name="description" content="Early warning for Irish brand impersonation, from public Certificate Transparency logs.">
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --line: #30363d;
+    --fg: #e6edf3; --dim: #8b949e; --faint: #6e7681;
+    --flag: #f85149; --review: #d29922; --ok: #3fb950; --link: #58a6ff;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #ffffff; --panel: #f6f8fa; --line: #d0d7de;
+      --fg: #1f2328; --dim: #636c76; --faint: #848d97;
+      --flag: #cf222e; --review: #9a6700; --ok: #1a7f37; --link: #0969da;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 48px 16px 80px; }
+
+  header { border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 28px; }
+  h1 { font: 600 28px/1.2 var(--mono); margin: 0 0 8px; letter-spacing: -0.5px; }
+  h1 span { color: var(--flag); }
+  .tag { color: var(--dim); margin: 0; max-width: 60ch; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+           gap: 1px; background: var(--line); border: 1px solid var(--line);
+           border-radius: 8px; overflow: hidden; margin: 28px 0; }
+  .stat { background: var(--panel); padding: 16px 18px; }
+  .stat b { display: block; font: 600 22px/1.2 var(--mono); margin-bottom: 4px; }
+  .stat small { color: var(--dim); font-size: 12px; text-transform: uppercase;
+                letter-spacing: 0.6px; }
+
+  .notice { border: 1px solid var(--review); border-left-width: 3px;
+            border-radius: 6px; padding: 14px 16px; margin: 24px 0;
+            background: color-mix(in srgb, var(--review) 8%, transparent); }
+  .notice strong { color: var(--review); }
+  .notice p { margin: 6px 0 0; color: var(--dim); font-size: 14px; }
+
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); margin: 36px 0 12px; font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 13px; }
+  th { text-align: left; color: var(--faint); font-weight: 500; font-size: 11px;
+       text-transform: uppercase; letter-spacing: 0.5px;
+       padding: 0 10px 8px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line);
+       vertical-align: top; }
+  tr:hover td { background: var(--panel); }
+  .dom { word-break: break-all; }
+  .score { font-weight: 600; white-space: nowrap; }
+  .v-flagged .score { color: var(--flag); }
+  .v-review  .score { color: var(--review); }
+  .brand { color: var(--dim); white-space: nowrap; }
+  .when { color: var(--faint); white-space: nowrap; font-size: 12px; }
+  .src { display: inline-block; font-size: 9px; letter-spacing: 0.5px;
+         text-transform: uppercase; padding: 1px 5px; border-radius: 3px;
+         background: var(--panel); border: 1px solid var(--line);
+         color: var(--faint); cursor: help; }
+  .pill { display: inline-block; font-size: 10px; letter-spacing: 0.5px;
+          text-transform: uppercase; padding: 2px 7px; border-radius: 10px;
+          border: 1px solid currentColor; }
+  .v-flagged .pill { color: var(--flag); }
+  .v-review  .pill { color: var(--review); }
+
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 13px; }
+  footer p { margin: 0 0 10px; max-width: 70ch; }
+  a { color: var(--link); }
+  code { font-family: var(--mono); font-size: 0.9em; color: var(--fg); }
+  .empty { color: var(--dim); padding: 28px 0; font-family: var(--mono); font-size: 13px; }
+  @media (max-width: 620px) {
+    .wrap { padding-top: 28px; }
+    .hide-sm { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>first<span>light</span></h1>
+    <p class="tag">Early warning for Irish brand impersonation, read from public
+    Certificate Transparency logs — where a phishing domain appears before the
+    scam goes live.</p>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="notice">
+    <strong>Flagged for review — not confirmed phishing.</strong>
+    <p>These domains resemble Irish brands and have been scored by an automated
+    model. Some will be legitimate businesses. Nothing here is an accusation.
+    If your domain is listed in error, open an issue on the repository and it
+    will be removed.</p>
+  </div>
+
+  <h2>Recent detections <span style="text-transform:none;letter-spacing:0;font-weight:400">
+   — rows marked <span class="src">corpus</span> were scored from a known-phishing
+   list to validate the pipeline, not observed live</span></h2>
+  <div id="list"></div>
+
+  <footer>
+    <p><strong>How it works.</strong> Every HTTPS certificate issued anywhere is
+    published to public CT logs within seconds. firstlight reads that stream,
+    filters for domains imitating Irish banks, An Post, Revenue, the HSE and
+    others, then asks <a href="https://typesafe.ai">Jev</a> — a decision-only
+    model returning calibrated probabilities — whether each is really
+    impersonation. Scores at or above 0.70 are flagged; 0.50–0.69 are held for
+    review.</p>
+    <p><strong>Coverage is partial by design.</strong> A full tail of one CT log
+    is roughly 121 GB/day, so this stays at the head of the log and processes
+    what bandwidth allows. It does not see every certificate and does not claim
+    to. Measured recall in calibration was about 22% at 97% precision.</p>
+    <p><strong>Known limits.</strong> Phishing hosted on <code>github.io</code>,
+    <code>repl.co</code> or compromised sites carries no signal in the domain
+    name and is not detectable this way.</p>
+    <p id="gen"></p>
+  </footer>
+
+</div>
+
+<script>
+const fmt = n => (n ?? 0).toLocaleString();
+const ago = iso => {
+  const s = (Date.now() - new Date(iso).getTime()) / 1000;
+  if (!isFinite(s)) return iso || "";
+  if (s < 3600) return Math.max(1, Math.round(s / 60)) + "m ago";
+  if (s < 86400) return Math.round(s / 3600) + "h ago";
+  return Math.round(s / 86400) + "d ago";
+};
+
+fetch("data.json?" + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject(r.status))
+  .then(render)
+  .catch(() => {
+    document.getElementById("list").innerHTML =
+      '<p class="empty">No data file yet. The collector publishes ' +
+      '<code>data.json</code> on its next run.</p>';
+  });
+
+function render(d) {
+  const t = d.totals || {};
+  document.getElementById("stats").innerHTML = [
+    [fmt(t.flagged), "flagged"],
+    [fmt(t.review), "under review"],
+    [fmt(t.certificates), "certificates read"],
+    [fmt(t.judged), "domains scored"],
+    ["$" + (t.cost_usd ?? 0).toFixed(2), "total cost"],
+  ].map(([v, l]) => `<div class="stat"><b>${v}</b><small>${l}</small></div>`).join("");
+
+  const rows = d.detections || [];
+  document.getElementById("list").innerHTML = rows.length ? `
+    <table>
+      <thead><tr>
+        <th>Domain</th><th>Score</th><th>Brand</th>
+        <th class="hide-sm">Why</th><th>Seen</th>
+      </tr></thead>
+      <tbody>${rows.map(r => `
+        <tr class="v-${r.verdict}">
+          <td class="dom">${esc(r.domain)}</td>
+          <td class="score">${r.score == null ? "—" : r.score.toFixed(2)}
+              <span class="pill">${esc(r.verdict)}</span></td>
+          <td class="brand">${esc(r.brand)}</td>
+          <td class="brand hide-sm">${esc(r.reason || "")}</td>
+          <td class="when">${ago(r.seen)}${r.source === "backfill"
+              ? ' <span class="src" title="scored from a known-phishing corpus, '
+                + 'not observed live on the certificate stream">corpus</span>' : ""}</td>
+        </tr>`).join("")}</tbody>
+    </table>` :
+    '<p class="empty">Nothing flagged yet. Irish-brand impersonation appears ' +
+    'in roughly 1 of every 2,400 domain names observed.</p>';
+
+  document.getElementById("gen").textContent =
+    "Last updated " + ago(d.generated) + " · " + (d.generated || "");
+}
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g,
+    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+</script>
+</body>
+</html>
