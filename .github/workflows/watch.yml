@@ -1,5 +1,10 @@
 name: firstlight
 
+# Netlify cannot run this: its Functions are JavaScript/TypeScript and Go only,
+# and scheduled functions cap at 30 seconds. GitHub Actions runs Python natively
+# with no such limit, and committing the result gives the dashboard its data
+# AND an independent, tamper-evident record of when each domain was detected -
+# which is the evidence behind any "found it before the blocklists" claim.
 
 on:
   schedule:
