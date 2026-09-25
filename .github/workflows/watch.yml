@@ -1,0 +1,61 @@
+name: firstlight
+
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # every 30 min; GitHub's floor is 5, and
+                                # scheduled runs are delayed under load anyway
+  workflow_dispatch:            # lets you trigger a run by hand
+
+permissions:
+  contents: write               # needed to commit data.json back
+
+concurrency:
+  group: firstlight              # never let two collectors race on the DB
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet cryptography
+
+      # The SQLite file is the dedup memory across runs. Without it every run
+      # re-reports the same domains and re-pays Jev for them.
+      - name: Restore state
+        uses: actions/cache/restore@v4
+        with:
+          path: firstlight.db
+          key: firstlight-db-${{ github.run_id }}
+          restore-keys: firstlight-db-
+
+      - name: Collect
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python watch.py --once --batches 120
+
+      - name: Export dashboard data
+        run: python watch.py --export site/data.json
+
+      - name: Save state
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: firstlight.db
+          key: firstlight-db-${{ github.run_id }}
+
+      - name: Publish
+        run: |
+          git config user.name  "firstlight"
+          git config user.email "firstlight@users.noreply.github.com"
+          git add site/data.json
+          git diff --staged --quiet && echo "no change" && exit 0
+          git commit -m "detections: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
