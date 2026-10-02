@@ -205,8 +205,16 @@ def run_pass(db, judge, base: str, log_name: str, batches: int,
                 stats["candidates"] += 1
                 brand, reason = hit
 
-                if db.execute("SELECT 1 FROM detections WHERE domain=?",
-                              (name,)).fetchone():
+                # Skip only domains that already have a verdict. A domain
+                # recorded as "unknown" was seen while Jev was unavailable
+                # (no key, dead key, outage); without this it would never be
+                # rescored and the finding would be lost permanently.
+                seen = db.execute("SELECT verdict FROM detections WHERE domain=?",
+                                  (name,)).fetchone()
+                if seen and seen[0] != "unknown":
+                    stats["skipped"] += 1
+                    continue
+                if seen and not judge.ready:
                     stats["skipped"] += 1
                     continue
 
@@ -218,7 +226,7 @@ def run_pass(db, judge, base: str, log_name: str, batches: int,
                     stats["flagged"] += 1
 
                 db.execute(
-                    "INSERT OR IGNORE INTO detections VALUES (?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT OR REPLACE INTO detections VALUES (?,?,?,?,?,?,?,?,?,?)",
                     (name, brand, reason,
                      (scored or {}).get("phishing"),
                      (scored or {}).get("impersonates"),
