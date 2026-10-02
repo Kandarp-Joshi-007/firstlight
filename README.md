@@ -79,6 +79,33 @@ part of the result.
 
 ---
 
+## What it has found
+
+Live detections from the certificate stream — found at issuance, not taken from
+any blocklist:
+
+```
+0.88  www.efbinflighttorders.ryanaair.com   Ryanair       doubled "a", serving an in-flight orders page
+0.83  support.revolt.ws                     Revolut       one edit from the brand
+0.82  *.mobile-anpost.com                   An Post
+0.80  www.revolet.co                        Revolut
+0.73  www.leaseard.website4.us              Leap Card
+0.64  openshell.office.k8s.ewnetworks.eu    ESB Networks  held for review, not flagged
+```
+
+`ryanaair.com` is the clearest case: Ryanair with a doubled letter, caught by the
+fuzzy matcher and confirmed by the model.
+
+Not every candidate flags. Of 18 seen live, 4 scored below the review threshold
+and were dropped — the model does reject, which is the point of having it rather
+than shipping the filter alone.
+
+Rate observed so far: **8 candidates per 507,880 domain names**, roughly one a
+day at current sampling. Irish-brand impersonation is genuinely uncommon; a
+sparse feed is the honest result, not a broken one.
+
+---
+
 ## Running it
 
 ```
