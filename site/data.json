@@ -1,15 +1,35 @@
 {
- "generated": "2026-10-02T16:15:28Z",
+ "generated": "2026-10-02T22:48:24Z",
  "totals": {
-  "certificates": 379203,
-  "names": 639503,
-  "candidates": 18,
-  "judged": 250,
+  "certificates": 414697,
+  "names": 712187,
+  "candidates": 20,
+  "judged": 252,
   "cost_usd": 0.0003,
-  "flagged": 246,
-  "review": 4
+  "flagged": 247,
+  "review": 5
  },
  "detections": [
+  {
+   "domain": "shanpost.com",
+   "brand": "An Post",
+   "reason": "contains 'anpost'",
+   "score": 0.73,
+   "target": "shipping",
+   "verdict": "flagged",
+   "seen": "2026-10-02T22:25:13Z",
+   "source": "live"
+  },
+  {
+   "domain": "go.swapcard.com",
+   "brand": "Leap Card",
+   "reason": "~'leapcard' (edit distance 2)",
+   "score": 0.6,
+   "target": "payment",
+   "verdict": "review",
+   "seen": "2026-10-02T22:25:04Z",
+   "source": "live"
+  },
   {
    "domain": "royalmail.revoluts.nl",
    "brand": "Revolut",
