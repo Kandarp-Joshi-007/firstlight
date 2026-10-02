@@ -78,6 +78,53 @@
   a { color: var(--link); }
   code { font-family: var(--mono); font-size: 0.9em; color: var(--fg); }
   .empty { color: var(--dim); padding: 28px 0; font-family: var(--mono); font-size: 13px; }
+
+  /* ---- validated data-viz palette (categorical slots 1-2) --------------
+     node scripts/validate_palette.js "#2a78d6,#eb6834" --mode light -> ALL PASS
+     node scripts/validate_palette.js "#3987e5,#d95926" --mode dark  -> ALL PASS */
+  .viz-root { --series-1: #2a78d6; --series-2: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      --series-1: #3987e5; --series-2: #d95926; }
+  }
+  :root[data-theme="dark"] .viz-root { --series-1: #3987e5; --series-2: #d95926; }
+
+  .finding { margin: 32px 0 44px; }
+  .lede { color: var(--dim); max-width: 68ch; margin: 0 0 20px; }
+  .hero { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+          padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px;
+          background: var(--panel); margin-bottom: 24px; }
+  .hero b { font: 600 44px/1 var(--mono); color: var(--series-1);
+            letter-spacing: -1px; }
+  .hero span { color: var(--dim); max-width: 42ch; }
+  .hero strong { color: var(--fg); }
+
+  .legend { display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
+            font-size: 12px; color: var(--dim); margin-bottom: 14px; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; display: block; }
+  .legend-note { color: var(--faint); margin-left: auto; }
+
+  .chart { display: grid; gap: 18px; }
+  .row-label { font-size: 12px; color: var(--dim); margin-bottom: 6px;
+               display: flex; justify-content: space-between; }
+  .row-label em { font-style: normal; color: var(--faint); }
+  .bar { position: relative; height: 18px; margin-bottom: 2px; cursor: default; }
+  .bar .fill { height: 100%; border-radius: 0 4px 4px 0; transition: filter .12s; }
+  .bar:hover .fill { filter: brightness(1.12); }
+  .bar .val { position: absolute; top: 50%; transform: translateY(-50%);
+              margin-left: 8px; font: 600 12px/1 var(--mono); color: var(--fg); }
+  .tip { position: fixed; z-index: 20; pointer-events: none; opacity: 0;
+         transition: opacity .1s; background: var(--bg); color: var(--fg);
+         border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px;
+         font: 12px/1.45 var(--mono); box-shadow: 0 4px 14px rgba(0,0,0,.28);
+         max-width: 240px; }
+  .tableview { margin: 22px 0 18px; }
+  .tableview summary { cursor: pointer; font-size: 12px; color: var(--dim); }
+  .numbers { width: auto; margin-top: 10px; font-size: 12px; }
+  .numbers th, .numbers td { padding: 4px 18px 4px 0; }
+  .caveat { color: var(--dim); font-size: 14px; max-width: 70ch; margin: 0 0 10px; }
+  .caveat strong { color: var(--fg); }
   @media (max-width: 620px) {
     .wrap { padding-top: 28px; }
     .hide-sm { display: none; }
@@ -94,6 +141,53 @@
     scam goes live.</p>
   </header>
 
+  <section class="viz-root finding">
+    <h2>Does the model actually work?</h2>
+    <p class="lede">Tested on 2,000 domains — 1,000 known phishing, 1,000
+    legitimate sampled from Tranco ranks 20k–300k so the control group is
+    genuinely hard. Compared against the keyword-and-edit-distance approach
+    existing certificate-log tools use.</p>
+
+    <div class="hero">
+      <b>4&times;</b>
+      <span>more impersonation domains caught than the standard approach,
+      at <strong>97% precision</strong></span>
+    </div>
+
+    <div class="legend">
+      <span><i style="background:var(--series-1)"></i>Jev</span>
+      <span><i style="background:var(--series-2)"></i>keyword baseline</span>
+      <span class="legend-note">% of phishing domains caught at threshold 0.70</span>
+    </div>
+
+    <div class="chart" id="chart"></div>
+
+    <details class="tableview">
+      <summary>View as table</summary>
+      <table class="numbers">
+        <thead><tr><th>Stratum</th><th>n</th><th>Jev</th><th>Baseline</th></tr></thead>
+        <tbody>
+          <tr><td>English</td><td>500</td><td>22.0%</td><td>3.8%</td></tr>
+          <tr><td>Non-English</td><td>400</td><td>18.8%</td><td>2.2%</td></tr>
+          <tr><td>Punycode</td><td>100</td><td>38.0%</td><td>23.0%</td></tr>
+          <tr><td><strong>All</strong></td><td>1000</td><td><strong>22.3%</strong></td>
+              <td><strong>5.1%</strong></td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <p class="caveat"><strong>Punycode is where it wins outright.</strong>
+    Homoglyph attacks — <code>xn--wkipedia-c2a.org</code> is "wikipedia" with a
+    substituted character — are semantic by construction, and the substitution
+    <em>is</em> the attack. A keyword list cannot see it.</p>
+
+    <p class="caveat"><strong>What it misses.</strong> Recall is 22%, and that
+    half is not recoverable: phishing hosted on <code>github.io</code> or
+    <code>repl.co</code> carries no signal in the domain name, because the
+    domain belongs to GitHub rather than the attacker.</p>
+  </section>
+
+  <h2>Live monitor</h2>
   <div class="stats" id="stats"></div>
 
   <div class="notice">
@@ -130,6 +224,41 @@
 </div>
 
 <script>
+
+const STRATA = [
+  { name: "English",     n: 500,  jev: 22.0, base: 3.8  },
+  { name: "Non-English", n: 400,  jev: 18.8, base: 2.2  },
+  { name: "Punycode",    n: 100,  jev: 38.0, base: 23.0 },
+];
+(function drawChart() {
+  const host = document.getElementById("chart");
+  if (!host) return;
+  const max = 40;
+  const tip = document.createElement("div");
+  tip.className = "tip"; document.body.appendChild(tip);
+  host.innerHTML = STRATA.map(s => `
+    <div>
+      <div class="row-label"><span>${s.name}</span><em>n = ${s.n}</em></div>
+      ${[["jev","Jev","--series-1"],["base","keyword baseline","--series-2"]]
+        .map(([k, label, v]) => `
+        <div class="bar" data-tip="${label} &middot; ${s.name}&#10;${s[k]}% of ${s.n} phishing domains caught">
+          <div class="fill" style="width:${(s[k] / max * 100).toFixed(1)}%;
+               background:var(${v})"></div>
+          <span class="val" style="left:${(s[k] / max * 100).toFixed(1)}%">${s[k]}%</span>
+        </div>`).join("")}
+    </div>`).join("");
+  host.querySelectorAll(".bar").forEach(bar => {
+    bar.addEventListener("mousemove", e => {
+      tip.innerHTML = bar.dataset.tip.replace(/
+/g, "<br>");
+      tip.style.opacity = 1;
+      tip.style.left = Math.min(e.clientX + 14, innerWidth - 250) + "px";
+      tip.style.top = (e.clientY + 16) + "px";
+    });
+    bar.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+  });
+})();
+
 const fmt = n => (n ?? 0).toLocaleString();
 const ago = iso => {
   const s = (Date.now() - new Date(iso).getTime()) / 1000;
