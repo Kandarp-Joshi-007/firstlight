@@ -282,6 +282,36 @@ def show_stats(db) -> None:
     print()
 
 
+def rescore_unknowns(db, judge, limit: int = 200) -> int:
+    """Score domains stored while Jev was unavailable.
+
+    The watcher only ever moves forward through the log, so a domain recorded
+    during an outage is never seen again and would stay unscored forever.
+    Seven days of live candidates sat stranded this way before this existed.
+    """
+    if not judge.ready:
+        return 0
+    rows = db.execute("SELECT domain, brand, reason FROM detections "
+                      "WHERE verdict = 'unknown' LIMIT ?", (limit,)).fetchall()
+    if not rows:
+        return 0
+    print(f"  rescoring {len(rows)} domain(s) stored without a verdict ...")
+    done = 0
+    for domain, brand, _ in rows:
+        scored = judge.judge(domain, brand or "")
+        if not scored:
+            break                      # key dead or outage: stop, try next run
+        v = jev_mod.verdict(scored.get("phishing"))
+        db.execute("UPDATE detections SET phishing=?, impersonates=?, target=?, "
+                   "verdict=? WHERE domain=?",
+                   (scored.get("phishing"), scored.get("impersonates"),
+                    scored.get("target"), v, domain))
+        done += 1
+        print(f"    [{v:<7}] {scored.get('phishing'):.2f}  {domain[:52]:<52} {brand}")
+    db.commit()
+    return done
+
+
 def export_site(db, path: Path) -> None:
     """Write the dashboard's data file.
 
@@ -338,6 +368,8 @@ def main() -> int:
                     help="seconds between passes in continuous mode")
     ap.add_argument("--no-jev", action="store_true",
                     help="filter only, no API calls")
+    ap.add_argument("--rescore-only", action="store_true",
+                    help="score stored unknowns and exit, without collecting")
     args = ap.parse_args()
 
     db = connect()
@@ -356,11 +388,19 @@ def main() -> int:
         print(f"{judge.key_var} not set - running filter-only.\n"
               f"  PowerShell:  $env:{judge.key_var} = '...'", file=sys.stderr)
 
+    if args.rescore_only:
+        n = rescore_unknowns(db, judge, limit=1000)
+        print(f"rescored {n}; ${judge.cost:.4f}")
+        return 0
+
     desc, base = pick_log()
     log_name = base.rstrip("/").rsplit("/", 1)[-1]
     print(f"watching {desc}\n  {base}")
     print(f"  {args.batches} batches x {BATCH} = ~{args.batches * BATCH} certs/pass"
           f"{'' if judge.ready else '   (no Jev key - filter only)'}\n")
+
+    # Clear any stranded unknowns before collecting more.
+    rescore_unknowns(db, judge)
 
     while not _stop:
         started = time.time()
