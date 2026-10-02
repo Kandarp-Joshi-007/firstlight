@@ -70,11 +70,25 @@ jobs:
           path: firstlight.db
           key: firstlight-db-${{ github.run_id }}
 
+      # A run takes ~20 minutes, so main can move underneath it - a push from a
+      # laptop, or another run finishing. The original step had no rebase and no
+      # retry, so any commit landing in that window failed the job after all the
+      # collection work had already succeeded. Rebase and retry instead.
       - name: Publish
         run: |
           git config user.name  "firstlight"
           git config user.email "firstlight@users.noreply.github.com"
           git add site/data.json
-          git diff --staged --quiet && echo "no change" && exit 0
+          git diff --staged --quiet && echo "nothing new to publish" && exit 0
           git commit -m "detections: $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "published on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected; rebasing onto origin/main and retrying"
+            git pull --rebase --autostash origin main || exit 1
+            sleep $((attempt * 5))
+          done
+          echo "could not publish after 3 attempts" >&2
+          exit 1
