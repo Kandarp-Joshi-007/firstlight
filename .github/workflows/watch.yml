@@ -51,6 +51,15 @@ jobs:
         # nothing, so the per-run volume goes up tenfold to compensate.
         run: python watch.py --once --batches 1200
 
+      # Idempotent: backfill.py skips domains already in the database, so this
+      # scores the seed once and is a no-op on every later run. It exists so the
+      # dashboard shows a validated result while live detections accumulate -
+      # Irish-brand impersonation appears about once per 60,000 names observed.
+      - name: Seed validated examples (once)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python backfill.py seed/irish-candidates.txt --name phishdb --limit 300
+
       - name: Export dashboard data
         run: python watch.py --export site/data.json
 
