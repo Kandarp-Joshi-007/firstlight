@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-04T11:45:51Z",
+ "generated": "2026-10-05T13:29:23Z",
  "totals": {
-  "certificates": 491444,
-  "names": 845759,
+  "certificates": 529828,
+  "names": 907521,
   "candidates": 21,
   "judged": 252,
   "cost_usd": 0.0003,
